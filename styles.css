@@ -1,16 +1,30 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #eee;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Gradient background */
+    animation: gradientBG 15s ease infinite; /* Animate background gradient */
+    background-size: 400% 400%; /* Make the gradient move smoothly */
+    overflow-x: hidden; /* Hide horizontal overflow for animations */
+    position: relative;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 header {
-    background-color: #0056b3;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent to show the dynamic background */
     color: white;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Apply blur for a futuristic look */
 }
 
 .header-content {
@@ -23,6 +37,12 @@ header {
 .logo {
     width: 100px;
     height: auto;
+    animation: logoSpin 5s linear infinite; /* Add spinning animation to the logo */
+}
+
+@keyframes logoSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .header-text {
@@ -32,6 +52,7 @@ header {
 header h1, header p {
     margin: 0;
     padding: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Add text shadow */
 }
 
 nav ul {
@@ -40,176 +61,196 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 30px;
+    animation: menuGlow 10s ease-in-out infinite; /* Glowing animation */
+}
+
+@keyframes menuGlow {
+    0%, 100% { text-shadow: 0 0 10px #fff; }
+    50% { text-shadow: 0 0 20px #00f; }
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for links */
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ff0;
 }
 
 main {
     padding: 20px;
 }
 
-section {
-    padding: 20px;
-    border: 1px solid #ddd; /* Adds a border around each section */
-    margin-bottom: 20px; /* Adds space between sections */
-    background-color: #fff; /* White background for contrast */
-    border-radius: 10px; /* Rounded corners */
-}
-
 h2 {
-    color: #0056b3;
     text-align: center;
-    margin-bottom: 20px;
-}
-a{
-    text-decoration-color: #ddd;
-}
-.employee-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.employee-box {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+p {
+    line-height: 1.6;
+    font-size: 18px;
+    text-align: justify;
 }
 
-.employee-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-footer {
-    background-color: #0056b3;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-/* Position the image container (needed to position the left and right arrows) */
 .container {
+    max-width: 1000px;
+    margin: 0 auto;
     position: relative;
-    max-width: 600px; /* Set a maximum width for the container */
-    margin: auto; /* Center the container */
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for the image gallery */
+    padding: 20px;
+    border-radius: 20px; /* Rounded corners for the gallery */
+    overflow: hidden; /* Hide overflow to make gallery neat */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow for a 3D effect */
+    z-index: 1;
 }
 
-/* Hide the images by default */
 .mySlides {
     display: none;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-    cursor: pointer;
+.mySlides img {
+    border-radius: 10px;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
+    margin-top: -22px;
     padding: 16px;
-    margin-top: -50px;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
+    transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    -webkit-user-select: none;
-    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background for buttons */
+    z-index: 2;
 }
 
-/* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+.prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* Container for image text */
 .caption-container {
     text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent caption background */
+    padding: 10px;
     color: white;
+    border-radius: 0 0 10px 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Shadow for caption text */
 }
 
-/* Fixed height and centered images */
-.mySlides img {
-    width: 100%;
-    height: 300px; /* Set a fixed height for all images */
-    object-fit: cover; /* Maintain aspect ratio, cropping as necessary */
-    display: block;
-    margin: auto;
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Six columns side by side */
 .column {
-    float: left;
-    width: 16.66%;
+    flex: 1;
+    max-width: 16.66%;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
-/* Add a transparency effect for thumbnail images */
-.demo {
+.column img {
     opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
-.active,
-.demo:hover {
+.column img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.active, .demo:hover {
     opacity: 1;
 }
 
-.area img {
+#area {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     display: block;
-    margin: 0 auto; /* Centers the image */
-    width: 50%;
-    height: 50%;
-    border: 2px solid blue; /* Adds a blue border */
+    margin: 20px auto;
+}
+
+#contact p, #contact a {
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Footer background matching header */
+    color: white;
+    margin-top: 20px;
+    font-size: 16px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+    color: #f7c08a;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Fireworks effect */
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.firework {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    animation: fireworkAnimation 1.5s ease-out forwards;
+}
+
+@keyframes fireworkAnimation {
+    0% { opacity: 1; transform: scale(0); }
+    100% { opacity: 0; transform: scale(20); }
+}
+
+.full-screen-image {
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 0; /* Remove any border-radius */
+    box-shadow: none; /* Remove box shadow */
+    display: block;
+    margin: 0 auto;
 }
