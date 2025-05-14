@@ -4,123 +4,229 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CREC4 Project Management Office</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="fireworks"></div> <!-- Fireworks container -->
+    <div class="particles-container"></div>
+    <div class="neon-circle"></div>
+    <div class="neon-circle small"></div>
+    <div class="neon-circle medium"></div>
 
-    <header>
+    <header class="glass-header">
         <div class="header-content">
-            <img src="logo.png" alt="Logo" class="logo"> <!-- Replace 'logo.png' with the actual path to your logo -->
+            <div class="logo-container">
+                <div class="holographic-logo">
+                    <img src="logo.png" alt="CREC4 Logo" class="logo">
+                </div>
+            </div>
             <div class="header-text">
-                <h1>CREC4 Project Management Office of Package WD6A of Dhaka Sanitation Improvement Project</h1>
-                <h1>中国中铁四局集团达卡公共卫生改善工程WD6A项目经理部</h1>
-                <br>
+                <h1 class="neon-text">CREC4 Project Management Office</h1>
+                <h2 class="subtitle">Package WD6A of Dhaka Sanitation Improvement Project</h2>
+                <h2 class="subtitle">中国中铁四局集团达卡公共卫生改善工程WD6A项目经理部</h2>
             </div>
         </div>
-        <nav>
+        <nav class="holographic-nav">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#a1">Area</a></li>
+                <li><a href="#about" class="nav-link"><span class="link-text">About</span></a></li>
+                <li><a href="#gallery" class="nav-link"><span class="link-text">Gallery</span></a></li>
+                <li><a href="#area" class="nav-link"><span class="link-text">Area</span></a></li>
+                <li><a href="#contact" class="nav-link"><span class="link-text">Contact</span></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="about">
-            <h2>About the Project</h2>
-            <p><a href="https://cptu.gov.bd/contract-award-details/contract-awards-13558.html#">Contract</a></br>CREC4 Package WD6A of Dhaka Sanitation Improvement Project is located in the southeast of Dhaka, the capital
-                of Bangladesh. It includes E1A and E1B Zone, with a total construction area of approximately 5.76 square
-                kilometers. The contract value is approximately 200 million yuan, and the construction period is 2 years.
-                The employer is the Dhaka Water Supply and Sewerage Authority, and the construction is constructed
-                with joint loan funds from the World Bank and the Asian Infrastructure Investment Bank.</br>
-                The project adopts a "design + construction" model and was jointly won by CREC4 and Bangladesh local
-                company ARIDOD in the name of a joint venture. The main work of the project includes: (1) E1A and
-                E1B regional sewage pipe network design work; (2) Reconstruction / New Construction / Rehabilitation
-                of Sewage collection Network in approximate length of 112.0 km with sufficient capacity to transfer
-                indicated sewage flow in year 2050 using open-trench method; (3) Approximately 14,238 household
-                sewage pipeline connection projects.</p>
+        <section id="about" class="glass-section">
+            <div class="section-header">
+                <h2><span class="section-number">01</span> About the Project</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="content-grid">
+                <div class="project-details">
+                    <div class="detail-card">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Location</h3>
+                        <p>Southeast Dhaka, Bangladesh</p>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-ruler-combined"></i>
+                        <h3>Area</h3>
+                        <p>5.76 square kilometers</p>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Contract Value</h3>
+                        <p>200 million yuan</p>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Duration</h3>
+                        <p>2 years</p>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <p>The CREC4 Package WD6A of Dhaka Sanitation Improvement Project is a transformative infrastructure initiative located in the southeast of Dhaka, the capital of Bangladesh. This comprehensive project encompasses E1A and E1B Zones, covering a total construction area of approximately 5.76 square kilometers.</p>
+                    <p>The project was awarded through a competitive bidding process and is being implemented with joint loan funds from the World Bank and the Asian Infrastructure Investment Bank. Our team is proud to be working in partnership with local Bangladeshi company ARIDOD to deliver this critical infrastructure.</p>
+                    <a href="https://cptu.gov.bd/contract-award-details/contract-awards-13558.html#" class="cta-button">
+                        View Contract Details <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
         </section>
 
-        <!-- Container for the image gallery -->
-        <div class="container">
-            <div class="mySlides">
-                <div class="numbertext">1 / 6</div>
-                <img src="images/image1.jpg" style="width:100%">
+        <section id="gallery" class="glass-section">
+            <div class="section-header">
+                <h2><span class="section-number">02</span> Project Gallery</h2>
+                <div class="section-line"></div>
             </div>
-            <div class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                <img src="images/image2.jpg" style="width:100%">
+            <div class="holographic-gallery">
+                <div class="gallery-container">
+                    <div class="gallery-viewport">
+                        <div class="gallery-slide active">
+                            <img src="images/image1.jpg" alt="Project Site">
+                            <div class="slide-caption">Project Site Overview</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/image2.jpg" alt="Team Meeting">
+                            <div class="slide-caption">Project Planning Meeting</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/1.jpg" alt="Construction Progress">
+                            <div class="slide-caption">Construction Progress</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/2.jpg" alt="Infrastructure">
+                            <div class="slide-caption">New Infrastructure</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/3.jpg" alt="Team Photo">
+                            <div class="slide-caption">Project Team</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/4.jpg" alt="Site Work">
+                            <div class="slide-caption">On-site Work</div>
+                        </div>
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="gallery-thumbnails"></div>
+                        <button class="gallery-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
             </div>
-            <div class="mySlides">
-                <div class="numbertext">3 / 6</div>
-                <img src="images/1.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">4 / 6</div>
-                <img src="images/2.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">5 / 6</div>
-                <img src="images/3.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">6 / 6</div>
-                <img src="images/4.jpg" style="width:100%">
-            </div>
+        </section>
 
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <!-- Image text -->
-            <div class="caption-container">
-                <p id="caption"></p>
+        <section id="area" class="glass-section full-width">
+            <div class="section-header">
+                <h2><span class="section-number">03</span> Project Area</h2>
+                <div class="section-line"></div>
             </div>
-
-            <!-- Thumbnail images -->
-            <div class="row">
-                <div class="column">
-                    <img class="demo cursor" src="images/image1.jpg" style="width:100%" onclick="currentSlide(1)" alt="CREC4">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="images/image2.jpg" style="width:100%" onclick="currentSlide(2)" alt="CREC4">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="images/1.jpg" style="width:100%" onclick="currentSlide(3)" alt="CREC4">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="images/2.jpg" style="width:100%" onclick="currentSlide(4)" alt="CREC4">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="images/3.jpg" style="width:100%" onclick="currentSlide(5)" alt="CREC4">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="images/4.jpg" style="width:100%" onclick="currentSlide(6)" alt="CREC4">
+            <div class="area-map-container">
+                <img src="images/area.png" alt="Project Area Map" class="area-map">
+                <div class="map-overlay">
+                    <div class="map-tooltip" style="top: 30%; left: 25%;">
+                        <div class="tooltip-content">
+                            <h3>E1A Zone</h3>
+                            <p>Primary sewage network installation</p>
+                        </div>
+                    </div>
+                    <div class="map-tooltip" style="top: 45%; left: 60%;">
+                        <div class="tooltip-content">
+                            <h3>E1B Zone</h3>
+                            <p>Secondary sewage connections</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="area-stats">
+                <div class="stat-item">
+                    <div class="stat-value" data-count="112">112</div>
+                    <div class="stat-label">Kilometers of Sewage Network</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-count="14238">14238</div>
+                    <div class="stat-label">Household Connections</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-count="2050">2050</div>
+                    <div class="stat-label">Designed for Year</div>
+                </div>
+            </div>
+        </section>
 
-        <section id="a1">
-          <h2>Area</h2>
-          <div class="area">
-              <img src="/images/area.png" alt="Area" class="full-screen-image" />
-          </div>
-      </section>
-      
-
-        <section id="contact">
-            <h2>Company Address</h2>
-            <p>Floor 6th, House D/35, Road 01, Sector 02, Block D,<br> Jahirul Islam City, Aftab Nogor, Merul Badda, Dhaka-1212</p>
-            <p>Email: <a href="mailto:pmo@dsipwd6a.com">pmo@dsipwd6a.com</a><br></p>
+        <section id="contact" class="glass-section">
+            <div class="section-header">
+                <h2><span class="section-number">04</span> Contact Us</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Office Address</h3>
+                        <p>Floor 6th, House D/35, Road 01, Sector 02, Block D,<br> Jahirul Islam City, Aftab Nogor, Merul Badda, Dhaka-1212</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:pmo@dsipwd6a.com">pmo@dsipwd6a.com</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Phone</h3>
+                        <p>+8801577046971</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-      <a href="https://sridoy.vercel.app">SM RIDOY</a>
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="CREC4 Logo">
+            </div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#area">Area</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 CREC4 Project Management Office. All rights reserved.</p>
+            <p>Developed by <a href="https://sridoy.vercel.app">SM RIDOY</a></p>
+        </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
